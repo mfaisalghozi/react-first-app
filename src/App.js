@@ -38,19 +38,20 @@ class App extends Component{
 
     render() {
       const {chars,data} = this.state
-      const result = data.map((entry, index)=>{
-        return <li key={index}>{entry}</li>
-      })
-
-      // this for returning API Data
-      // return <div>{result}</div>
-
+  
       return (
         <div className="container">
           <Table charData={chars} removeCharacter={this.removeCharacter} />
           <Form handleSubmit={this.handleSubmit} />
         </div>
       )
+
+      // this for returning API Data
+      // return <div>{result}</div>
+      // const result = data.map((entry, index)=>{
+        //   return <li key={index}>{entry}</li>
+        // })
+
     }
 }
 
